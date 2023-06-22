@@ -49,7 +49,7 @@ function App() {
         <main>
           {steps.map((s) =>
             currentStep === s.index
-              ? <div key={s.index} style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%" }}>
+              ? <div key={s.index} style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%", margin: "16px 0" }}>
                 <div className='step-title'>Step {currentStep}: {s.title} </div>
                 {s.element}
               </div>
