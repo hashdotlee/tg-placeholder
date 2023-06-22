@@ -1,31 +1,63 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  background-color: #12161a;
   min-height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.app-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.app-header img {
+  height: auto;
+  width: 150px;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+main>a.next-step-button {
+  color: rgb(255, 255, 255);
+  background: rgb(221, 0, 78);
+  font-size: 22px;
+  border-radius: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: none;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  margin: 36px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.step-title {
+  font-size: 56px;
+  text-align: center;
   color: white;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin: 36px 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.heart {
-  color: #ff0000;
-}
-
-.small {
-  font-size: 0.75rem;
+@media only screen and (max-width: 600px) {
+  .step-title {
+    font-size: 36px;
+  }
 }
