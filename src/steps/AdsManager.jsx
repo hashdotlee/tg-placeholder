@@ -1,4 +1,4 @@
 import VideoComponent from './VideoComponent'
 export default function AdsManager() {
-    return <VideoComponent url="https://www.youtube.com/watch?v=e0PuWoXTOds&list=RDW1LyCfk3DoE&index=2"/>
+    return <VideoComponent url="https://youtu.be/_QwHvI1Ixx4"/>
 }

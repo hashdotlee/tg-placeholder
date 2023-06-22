@@ -5,6 +5,7 @@ import AdsManager from './steps/AdsManager';
 import StrategySession from './steps/StrategySession';
 import FinalWords from './steps/FinalWords';
 import "./App.css"
+import logo from './assets/logo.png';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -19,36 +20,31 @@ function App() {
   },
   {
     index: 2,
-    title: 'Contract & Invoice Payment',
+    title: 'Contract & Payment',
     element: <ContractInvoice />
   },
   {
     index: 3,
-    title: 'Time For Ads Manager Integration',
+    title: 'Find your target audience',
     element: <AdsManager />
   },
   {
     index: 4,
-    title: 'Tell Us About Your Audience',
+    title: 'Strategy session',
     element: <StrategySession />
   },
   {
     index: 5,
-    title: 'Book In Your Strategy Session',
+    title: 'Some last words',
     element: <FinalWords />
   },
-  {
-    index: 6,
-    title: 'Comming soon...',
-    element: <></>
-  }
   ]
 
   return (
     <div className="app">
       <div className='container'>
         <header className='app-header'>
-          <img src="https://images.clickfunnels.com/cd/796d2d8e1348babde7aa795db15ca0/placeholder.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </header>
         <main>
           {steps.map((s) =>
@@ -70,7 +66,7 @@ function App() {
               href={`${window.location.pathname}?step=${currentStep < steps.length ? currentStep + 1 : currentStep}`}
               role='button'
             >
-              Take me to the next step ({currentStep}/6)
+              Take me to the next step ({currentStep}/{steps.length})
             </a>
             : <></>
           }
