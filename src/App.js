@@ -52,7 +52,10 @@ function App() {
           {steps.map((s) =>
             currentStep === s.index
               ? <div key={s.index} style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%", margin: "16px 0" }}>
-                <div className='step-title'>Step {currentStep}: {s.title} </div>
+                <div style={{ margin: "36px 0" }}>
+                  <div className='step-title'>Step {currentStep}: {s.title}</div>
+                  <div style={{ fontSize: "12px", fontWeight: "400", color: "rgba(255,255,255,0.6)", textAlign: "center", margin: "8px 0" }}>Choose 1.25x playback speed to speed up the process!</div>
+                </div>
                 {s.element}
               </div>
               : null
