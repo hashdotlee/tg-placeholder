@@ -44,7 +44,9 @@ function App() {
     <div className="app">
       <div className='container'>
         <header className='app-header'>
-          <img src={logo} alt="logo" />
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
         </header>
         <main>
           {steps.map((s) =>
